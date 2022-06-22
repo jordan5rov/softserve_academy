@@ -1,0 +1,5 @@
+# Extract from 'ps' output pids of all the processes run from the current user
+ps -eF | awk '{print $1, $2}' | grep $USER | awk '{print $2}'
+
+# Extract all ip addresses(ipv4 and ipv6) assigned to the host from ifconfig output. Present them in alphabetical order.
+ifconfig | grep 'inet addr:\|inet \|inet6 addr:\|inet6 ' | grep -v '127.0.0.1\|::1' | sed 's/addr://' | awk '{ print $2}| sort -u'

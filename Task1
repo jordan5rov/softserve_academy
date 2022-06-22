@@ -1,0 +1,6 @@
+# the current time in format hh:mm:ss
+^(2[0-3]|[01]?[0-9]):([0-5]?[0-9]):([0-5]?[0-9])$
+# pv4 address
+^((([01]?[0-9]?[0-9])|(2[0-5]{2}))\.){3}((([01]?[0-9]?[0-9])|(2[0-5]{2})))$
+# whole paragraph of test text. Please pick up any text.
+\N+
