@@ -47,7 +47,4 @@ then
     output="$output""The number of active python/perl proccess is $(pgrep -i 'python|perl' |wc -l)"
     echo -e $output
 
- 
-    crontab -l | { cat; echo "0 1 * * * mail -s \"Data\" jordan5rov@gmail.com <<< "$output" "; } | crontab -
-
 fi
